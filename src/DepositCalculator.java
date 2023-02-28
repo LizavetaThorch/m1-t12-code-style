@@ -1,15 +1,19 @@
 import java.util.Scanner;
 public class DepositCalculator {
+
     public static void main(String[] args) {
         new DepositCalculator().calculateContribution();
     }
+
     double calculateComplexPercentFunction(double amount, double yearRate, int depositPeriod) {
         double totalSum = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
         return roundNumber(totalSum,2);
     }
+
     double CalculateSimplePercentFunction(double amount, double yearRate, int depositPeriod) {
         return roundNumber(amount + amount * yearRate * depositPeriod,2);
     }
+
     double roundNumber(double value,int places) {
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
