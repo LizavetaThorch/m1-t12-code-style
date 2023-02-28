@@ -11,7 +11,7 @@ public class DepositCalculator {
         return roundNumber(amount + amount * yearRate * depositPeriod,2);
     }
     double roundNumber(double value,int places) {
-        double scale = Math.pow(10, places); //rounding- округление
+        double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
     }
 
